@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function init() {
+            var obj = [
+                { name: "Raquib", age: 45 },
+                { name: "Bhavani", age: 27 },
+                { name: "Abinit", age: 23 },
+                { name: "Abdul", age: 29 }
+            ];
+            console.log("Before Sort: " + JSON.stringify(obj));
+
+            var objAge = obj.sort(function (obj1, obj2) {
+                return obj1.age - obj2.age;
+            });
+            console.log("Ascending wrt Age: " + JSON.stringify(objAge));
+
+            var objName = obj.sort(function (obj1, obj2) {
+                var nameA = obj1.name.toLowerCase(), nameB = obj2.name.toLowerCase()
+                if (nameA < nameB)
+                    return -1
+                if (nameA > nameB)
+                    return 1
+                return 0
+            });
+            console.log("Ascending wrt Name: " + JSON.stringify(objName));
+        }
+    </script>
+</head>
+
+<body onLoad="init()">
+</body>
+
+</html>

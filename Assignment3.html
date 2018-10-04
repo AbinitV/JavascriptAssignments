@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function init() {
+            var person = prompt("Please enter a url", "http://google.com");
+            var location = new URL(person);
+            var parser = document.createElement('a')
+            parser.href = location;
+            console.log("Protocol: " + parser.protocol);
+            console.log("Host: " + parser.host);
+            console.log("HostName: " + parser.hostname);
+            console.log("Port: " + parser.port);
+            console.log("Path Name: " + parser.pathname);
+            console.log("Query Params: " + parser.search);
+        }
+    </script>
+</head>
+
+<body onLoad="init()">
+</body>
+
+</html>

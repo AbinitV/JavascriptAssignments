@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <select id="mySelect">
+                  <option>Apple</option>
+                  <option>Pear</option>
+                  <option>Banana</option>
+                  <option>Orange</option>
+                </select>
+        <input type='button' value='Add more elements in the dropdown!!' onclick='elementAdd();'>
+        <input type='button' value='Click here to show no of elements!' onclick='elementCount();'>
+    </form>
+    <script>
+        function elementCount() {
+            var dropdown = document.getElementById("mySelect");
+            alert("The dropdown contains :" + dropdown.options.length + " elements.");
+        }
+
+        function elementAdd() {
+            var dropdown = document.getElementById("mySelect");
+            var element = prompt("enter element you want to add!!");
+            var option = document.createElement("option");
+            option.text = element;
+            dropdown.add(option);
+            alert("Elemet added Successfully!!")
+        }
+    </script>
+</body>
+
+</html>
